@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 import Card from "./Card"; // Assuming Card component is located in a file named Card.js
 
 const Home = () => {
+  const navigate = useNavigate();
   const [teachers, setTeachers] = useState([]);
   const [newTeacher, setNewTeacher] = useState({
     fullName: "",
@@ -51,8 +53,7 @@ const Home = () => {
   };
 
   const updateTeacher = async (id) => {
-    // @ts-ignore
-    window.location = `/update/${id}`;
+    navigate(`/update/${id}`);
   };
 
   useEffect(() => {

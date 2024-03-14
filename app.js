@@ -4,7 +4,6 @@ const fs = require("fs");
 const cors = require("cors");
 
 const app = express();
-7;
 const PORT = 5000;
 
 const path = require("path");
